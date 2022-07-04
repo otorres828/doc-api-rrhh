@@ -9,7 +9,7 @@
     @yield('css')
     @yield('head')
     <title>@yield('title')</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     @livewireStyles
 
 </head>
@@ -18,8 +18,8 @@
 
     @yield('main')
            <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <script src="{{ asset('js/app.js') }}"></script>
+    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+    <script src="{{ mix('js/app.js') }}"></script>
     @livewireScripts
    </body>
 </html>
