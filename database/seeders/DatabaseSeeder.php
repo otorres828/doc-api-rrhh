@@ -24,6 +24,5 @@ class DatabaseSeeder extends Seeder
         // ]);
         // Category::factory(15)->create();
         // Document::factory(80)->create();
-        Trabajador::factory(10)->create();
     }
 }
