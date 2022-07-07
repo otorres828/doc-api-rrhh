@@ -5,22 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
-
+        <title>{{ config('app.name', 'Mansion de Cristo') }}</title>
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-
         <!-- Styles -->
-        @livewireStyles
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        @livewireStyles
         <!-- Scripts -->
-        {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+        <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
+        
         <x-jet-banner />
 
         <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
+            @include('components.aminblog.navigation')
 
             <!-- Page Heading -->
             @if (isset($header))
@@ -38,9 +37,6 @@
         </div>
 
         @stack('modals')
-        @stack('js')
-        @stack('css')
-        <script src="{{ mix('js/app.js') }}"></script>
 
         @livewireScripts
     </body>
