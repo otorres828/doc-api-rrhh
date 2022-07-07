@@ -54,8 +54,3 @@
     </div>
 @endsection
 
-@section('js')
-<link rel="stylesheet" href="{{ asset('vendor/ckeditor/plugins/codesnippet/lib/highlight/styles/arta.css') }}">
-<script src="{{ asset('vendor/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js') }}"></script>
-
-@endsection
